@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,6 +22,7 @@ public class Login extends javax.swing.JFrame {
     private Connection conn = new Koneksi().connect();
     static ResultSet rs;
     private DefaultTableModel tabmode;
+    static ArrayList<String> dataku = new ArrayList<>();
 
     protected void aktif() {
         txtID.setEnabled(true);
@@ -297,9 +299,14 @@ public class Login extends javax.swing.JFrame {
         String sql = "insert into Admin (Id, Password, Nama) values (?,?,?)";
         try {
             PreparedStatement stat = conn.prepareStatement(sql);
-            stat.setString(1, txtID.getText());
-            stat.setString(3, txtNAME.getText());
-            stat.setString(2, txtPASSWORD.getText().toLowerCase());
+
+            dataku.clear();
+            dataku.add(txtID.getText());
+            dataku.add(txtPASSWORD.getText().toLowerCase());
+            dataku.add(txtNAME.getText());
+            for (int i = 0; i < dataku.size(); i++) {
+                stat.setString(i + 1, dataku.get(i));
+            }
 
             stat.executeUpdate();
             JOptionPane.showMessageDialog(null, "Saved", "Register", JOptionPane.INFORMATION_MESSAGE);
@@ -333,8 +340,13 @@ public class Login extends javax.swing.JFrame {
         try {
             String sql = "update Admin set Password=?, Nama=? where Id='" + txtID.getText() + "'";
             PreparedStatement stat = conn.prepareStatement(sql);
-            stat.setString(2, txtNAME.getText());
-            stat.setString(1, txtPASSWORD.getText().toLowerCase());
+
+            dataku.clear();
+            dataku.add(txtPASSWORD.getText().toLowerCase());
+            dataku.add(txtNAME.getText());
+            for (int i = 0; i < dataku.size(); i++) {
+                stat.setString(i + 1, dataku.get(i));
+            }
 
             stat.executeUpdate();
             JOptionPane.showMessageDialog(null, "Saved", "Update", JOptionPane.INFORMATION_MESSAGE);
