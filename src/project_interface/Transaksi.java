@@ -41,6 +41,7 @@ public class Transaksi extends javax.swing.JFrame {
         txtBayar.setEnabled(true);
         txtStatus.setEnabled(true);
         txtKembalian.setEnabled(true);
+        txtCari.setEnabled(true);
         txtTransaksi.requestFocus();
     }
 
@@ -54,6 +55,7 @@ public class Transaksi extends javax.swing.JFrame {
         txtBayar.setText("");
         txtStatus.setText("");
         txtKembalian.setText("");
+        txtCari.setText("");
     }
 
     protected void datatablemenu() {
@@ -197,6 +199,9 @@ public class Transaksi extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        txtCari = new javax.swing.JTextField();
+        search = new javax.swing.JButton();
+        caristatus = new javax.swing.JLabel();
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -365,6 +370,15 @@ public class Transaksi extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Snap ITC", 0, 14)); // NOI18N
         jLabel7.setText("Pelanggan");
 
+        search.setText("Search");
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
+
+        caristatus.setText("Cari Status");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -430,6 +444,12 @@ public class Transaksi extends javax.swing.JFrame {
                                 .addComponent(Update, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(caristatus)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(search)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -511,7 +531,11 @@ public class Transaksi extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(insert)
                     .addComponent(Update)
-                    .addComponent(delete))
+                    .addComponent(delete)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(caristatus)
+                        .addComponent(search)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -698,6 +722,30 @@ public class Transaksi extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtStatusActionPerformed
 
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        Object[] Baris = {"Id Transaksi", "Pelanggan", "No HP", "Nominal", "Status"};
+        DefaultTableModel tabmode = new DefaultTableModel(null, Baris);
+        tableTRANSAKSI.setModel(tabmode);
+        try {
+            String sql = "SELECT * FROM detail_bon WHERE STATUS LIKE '%" + txtCari.getText() + "%'order by Id_Transaksi";
+            java.sql.Statement stat = conn.createStatement();
+            ResultSet hasil = stat.executeQuery(sql);
+            while (hasil.next()) {
+                String Id_Transaksi = hasil.getString("Id_Transaksi");
+                String Nama = hasil.getString("Nama");
+                String Nomor = hasil.getString("Nomor");
+                String Nominal = hasil.getString("Nominal");
+                String Status = hasil.getString("Status");
+
+                String[] data = {Id_Transaksi, Nama, Nomor, Nominal, Status};
+                tabmode.addRow(data);
+            }
+            tableTRANSAKSI.setModel(tabmode);
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_searchActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -744,6 +792,7 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JButton Update;
     private javax.swing.JButton back;
     private javax.swing.JLabel bayar;
+    private javax.swing.JLabel caristatus;
     private javax.swing.JButton delete;
     private javax.swing.JLabel email;
     private javax.swing.JLabel enterKembalian;
@@ -766,6 +815,7 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JLabel nama;
     private javax.swing.JLabel no;
     private javax.swing.JLabel nominal;
+    private javax.swing.JButton search;
     private javax.swing.JLabel status;
     private javax.swing.JTable tableMenu;
     private javax.swing.JTable tablePelanggan;
@@ -774,6 +824,7 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JLabel totalharga;
     private javax.swing.JLabel transaksi;
     private javax.swing.JTextField txtBayar;
+    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtKembalian;
     private javax.swing.JTextField txtNama;
