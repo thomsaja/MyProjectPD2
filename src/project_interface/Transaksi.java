@@ -9,8 +9,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -120,6 +125,18 @@ public class Transaksi extends javax.swing.JFrame {
         } catch (Exception e) {
 
         }
+    }
+
+    public static Date getTanggalfromTable(JTable table, int kolom) {
+        JTable tabel = table;
+        String str_tgl = String.valueOf(table.getValueAt(table.getSelectedRow(), kolom));
+        Date tanggal = null;
+        try {
+            tanggal = new SimpleDateFormat("yyyy-MM-dd").parse(str_tgl);
+        } catch (ParseException ex) {
+            Logger.getLogger(Transaksi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return tanggal;
     }
 
     public Transaksi() {
@@ -643,7 +660,8 @@ public class Transaksi extends javax.swing.JFrame {
         String d = tabmode2.getValueAt(bar, 3).toString();
         String e = tabmode2.getValueAt(bar, 4).toString();
         String f = tabmode2.getValueAt(bar, 5).toString();
-        String g = tabmode2.getValueAt(bar, 6).toString();
+        txtTanggal.setDate(getTanggalfromTable(tablePelanggan, 6));
+        String h = tabmode2.getValueAt(bar, 7).toString();
 
         txtTransaksi.setText(a);
         txtNama.setText(b);
@@ -655,8 +673,8 @@ public class Transaksi extends javax.swing.JFrame {
 
     private void txtTanggalPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txtTanggalPropertyChange
         if (txtTanggal.getDate() != null) {
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-            tgl = format.format(txtTanggal.getDate());
+            SimpleDateFormat formatnya = new SimpleDateFormat("yyyy-MM-dd");
+            tgl = formatnya.format(txtTanggal.getDate());
         }
     }//GEN-LAST:event_txtTanggalPropertyChange
 
@@ -705,6 +723,12 @@ public class Transaksi extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Transaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
