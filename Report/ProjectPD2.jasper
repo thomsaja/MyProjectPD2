@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+    a {text-decoration: none}
+  </style>
+</head>
+<body text="#000000" link="#000000" alink="#000000" vlink="#000000">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td width="50%">&nbsp;</td><td align="center">
+
+<a name="JR_PAGE_ANCHOR_0_1"></a>
+<table class="jrPage" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 595px; border-collapse: collapse; background-color: white;">
+<tr valign="top" style="height:0">
+<td style="width:20px"></td>
+<td style="width:79px"></td>
+<td style="width:21px"></td>
+<td style="width:58px"></td>
+<td style="width:39px"></td>
+<td style="width:40px"></td>
+<td style="width:26px"></td>
+<td style="width:11px"></td>
+<td style="width:42px"></td>
+<td style="width:79px"></td>
+<td style="width:38px"></td>
+<td style="width:41px"></td>
+<td style="width:39px"></td>
+<td style="width:40px"></td>
+<td style="width:2px"></td>
+<td style="width:20px"></td>
+</tr>
+<tr valign="top" style="height:33px">
+<td colspan="16">
+</td>
+</tr>
+<tr valign="top" style="height:33px">
+<td>
+</td>
+<td colspan="6" style="text-indent: 0px;  vertical-align: middle;text-align: left;">
+<span style="font-family: Arial; color: #000000; font-size: 22px; line-height: 1.1499023; font-weight: bold;">Laporan Hasil Penjualan</span></td>
+<td colspan="9">
+</td>
+</tr>
+<tr valign="top" style="height:22px">
+<td colspan="3">
+</td>
+<td colspan="5" style="text-indent: 0px; text-align: left;">
+<span style="font-family: Arial; color: #666666; font-size: 18px; line-height: 1.1499023;">[Berdasarkan Status]</span></td>
+<td colspan="8">
+</td>
+</tr>
+<tr valign="top" style="height:21px">
+<td colspan="16">
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #666666; font-size: 12px; line-height: 1.1499023; font-weight: bold;">Id Transaksi</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #666666; font-size: 12px; line-height: 1.1499023; font-weight: bold;">Nama</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #666666; font-size: 12px; line-height: 1.1499023; font-weight: bold;">Nomor</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: left;">
+<span style="font-family: Arial; color: #666666; font-size: 12px; line-height: 1.1499023; font-weight: bold;">Email</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #666666; font-size: 12px; line-height: 1.1499023; font-weight: bold;">Nominal</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #666666; font-size: 12px; line-height: 1.1499023; font-weight: bold;">Harga</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #666666; font-size: 12px; line-height: 1.1499023; font-weight: bold;">Status</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td colspan="16">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">002</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">5</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">7000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Lunas</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">001</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">20</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">22000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Lunas</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">003</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">10</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">12000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Lunas</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">004</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">50</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">52000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Hutang</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">005</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">20</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">22000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Hutang</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">006</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">20</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">22000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Hutang</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">007</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">10</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">12000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Lunas</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">008</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">5</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">7000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Lunas</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">009</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">100</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">101000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Lunas</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">010</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">10</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">12000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Hutang</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">011</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">100</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">101000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Lunas</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:15px">
+<td>
+</td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">012</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Thomas</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">08213263167</span></td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">thomas@gmai</span></td>
+<td style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">50</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">52000</span></td>
+<td colspan="2" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: Arial; color: #000000; font-size: 12px; line-height: 1.1499023;">Hutang</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:442px">
+<td colspan="16">
+</td>
+</tr>
+<tr valign="top" style="height:1px">
+<td>
+</td>
+<td colspan="14" style="border-top: 1px solid #999999; ">
+</td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:41px">
+<td colspan="16">
+</td>
+</tr>
+<tr valign="top" style="height:20px">
+<td>
+</td>
+<td colspan="4" style="text-indent: 0px; text-align: left;">
+<span style="font-family: Arial; color: #666666; font-size: 10px; line-height: 1.1499023;">Wednesday 02 January 2019</span></td>
+<td colspan="6">
+</td>
+<td colspan="2" style="text-indent: 0px; text-align: right;">
+<span style="font-family: Arial; color: #666666; font-size: 10px; line-height: 1.1499023;">Page 1 of</span></td>
+<td style="text-indent: 0px; text-align: left;">
+<span style="font-family: Arial; color: #666666; font-size: 10px; line-height: 1.1499023;">&nbsp;1</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:20px">
+<td colspan="16">
+</td>
+</tr>
+</table>
+
+<![if IE]>
+<script>
+var links = document.querySelectorAll('link.jrWebFont');
+setTimeout(function(){ if (links) { for (var i = 0; i < links.length; i++) { links.item(i).href = links.item(i).href; } } }, 0);
+</script>
+<![endif]>
+</td><td width="50%">&nbsp;</td></tr>
+</table>
+</body>
+</html>

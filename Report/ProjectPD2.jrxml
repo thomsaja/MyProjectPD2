@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProjectPD2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8cd69eb0-0eb4-4801-b361-36b65840650c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     transaksi.`Id_Transaksi` AS transaksi_Id_Transaksi,
+     transaksi.`Nama` AS transaksi_Nama,
+     transaksi.`Nomor` AS transaksi_Nomor,
+     transaksi.`Email` AS transaksi_Email,
+     pulsa.`Nominal` AS pulsa_Nominal,
+     pulsa.`Harga` AS pulsa_Harga,
+     transaksi.`Status` AS transaksi_Status
+FROM
+     `pulsa` pulsa INNER JOIN `transaksi` transaksi ON pulsa.`Id_Menu` = transaksi.`Id_Menu`]]>
+	</queryString>
+	<field name="transaksi_Id_Transaksi" class="java.lang.String"/>
+	<field name="transaksi_Nama" class="java.lang.String"/>
+	<field name="transaksi_Nomor" class="java.lang.String"/>
+	<field name="transaksi_Email" class="java.lang.String"/>
+	<field name="pulsa_Nominal" class="java.lang.String"/>
+	<field name="pulsa_Harga" class="java.lang.String"/>
+	<field name="transaksi_Status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="e9fc2a55-53b3-4a09-a9ad-8b012d58ba11"/>
+				<textElement verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Laporan Hasil Penjualan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="100" y="46" width="174" height="22" uuid="12add51e-114a-43ce-893f-1d5c21024b54"/>
+				<text><![CDATA[[Berdasarkan Status]]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="7d1636b6-c460-4fb0-b0f3-2965c48bbad9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="feacc795-54a8-459f-9eb4-2423779c488c"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Id Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="58daf672-0c12-46c6-9632-914623e4582c"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="2cef82c3-7ffc-401c-be53-9f5535da29d5"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Nomor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="3870f650-0869-4e9c-a43f-43041973f284"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="83c7fc3f-b4b8-40b1-a6aa-f11263317b48"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Nominal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="99648353-cf16-4ae4-9eee-1ab9292d40a9"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="05a52665-60af-495b-a988-3514cd26453b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="a8d80dca-3579-4e04-9b26-6808e67ef470"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="d90c5c8d-5e1b-426c-a4b6-cf4f6549e349"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{transaksi_Id_Transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="4e887866-6e7c-4b69-8545-b1539cd40f55"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{transaksi_Nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="6c954a33-954d-4afe-a3ec-a511a7166153"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{transaksi_Nomor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="cfc82270-aa93-4d59-84a1-4bf61a986d1f"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{transaksi_Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="4356b825-5b7b-49d0-bdc4-c4f654282113"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{pulsa_Nominal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="b591859d-8281-4d1e-8707-bae58999fba6"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{pulsa_Harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="050d7861-53ba-4769-909f-054a22dd44a1"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{transaksi_Status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="edc08daa-b871-4bfe-a40f-dad047cb8cf5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="6c3dbdc5-ca27-4433-a439-354493f50ebc"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="b1ffc638-a00f-4d78-a793-2f904e4d6371"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="412e5ee5-3ed6-45e0-8a03-707da10de384"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

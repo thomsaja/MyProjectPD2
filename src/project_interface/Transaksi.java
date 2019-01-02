@@ -18,6 +18,13 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -29,6 +36,10 @@ public class Transaksi extends javax.swing.JFrame {
     private DefaultTableModel tabmode;
     private DefaultTableModel tabmode1;
     private DefaultTableModel tabmode2;
+
+    JasperDesign jasperDesign;
+    JasperReport JasRep;
+    JasperPrint JasPri;
 
     private String tgl;
 
@@ -201,6 +212,7 @@ public class Transaksi extends javax.swing.JFrame {
         search = new javax.swing.JButton();
         caristatus = new javax.swing.JLabel();
         stats = new javax.swing.JComboBox<>();
+        print = new javax.swing.JButton();
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -380,6 +392,13 @@ public class Transaksi extends javax.swing.JFrame {
 
         stats.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lunas", "Hutang" }));
 
+        print.setText("Print");
+        print.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                printActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -463,7 +482,8 @@ public class Transaksi extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
+                                    .addComponent(jLabel5)
+                                    .addComponent(print))
                                 .addGap(17, 17, 17)
                                 .addComponent(jScrollPane3)))))
                 .addContainerGap())
@@ -551,7 +571,9 @@ public class Transaksi extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(print)))
                 .addContainerGap())
         );
 
@@ -772,6 +794,21 @@ public class Transaksi extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_searchActionPerformed
 
+    private void printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printActionPerformed
+        String reportSource = null;
+        String reportDest = null;
+        try {
+            reportSource = System.getProperty("user.dir") + "/Report/ProjectPD2.jrxml";
+            reportDest = System.getProperty("user.dir") + "/Report/ProjectPD2.jasper";
+            JasRep = JasperCompileManager.compileReport(reportSource);
+            JasPri = JasperFillManager.fillReport(JasRep, null, conn);
+            JasperExportManager.exportReportToHtmlFile(JasPri, reportDest);
+            JasperViewer.viewReport(JasPri, false);
+        } catch (Exception e) {
+            System.out.println(e);;
+        }
+    }//GEN-LAST:event_printActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -841,6 +878,7 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JLabel nama;
     private javax.swing.JLabel no;
     private javax.swing.JLabel nominal;
+    private javax.swing.JButton print;
     private javax.swing.JButton search;
     private javax.swing.JComboBox<String> stats;
     private javax.swing.JLabel status;
