@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Hashtable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -41,7 +42,6 @@ public class Transaksi extends javax.swing.JFrame {
         txtBayar.setEnabled(true);
         txtStatus.setEnabled(true);
         txtKembalian.setEnabled(true);
-        txtCari.setEnabled(true);
         txtTransaksi.requestFocus();
     }
 
@@ -55,7 +55,6 @@ public class Transaksi extends javax.swing.JFrame {
         txtBayar.setText("");
         txtStatus.setText("");
         txtKembalian.setText("");
-        txtCari.setText("");
     }
 
     protected void datatablemenu() {
@@ -199,9 +198,9 @@ public class Transaksi extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtCari = new javax.swing.JTextField();
         search = new javax.swing.JButton();
         caristatus = new javax.swing.JLabel();
+        stats = new javax.swing.JComboBox<>();
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -379,6 +378,8 @@ public class Transaksi extends javax.swing.JFrame {
 
         caristatus.setText("Cari Status");
 
+        stats.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lunas", "Hutang" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -447,8 +448,8 @@ public class Transaksi extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(caristatus)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(stats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(5, 5, 5)
                                 .addComponent(search)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
@@ -528,14 +529,15 @@ public class Transaksi extends javax.swing.JFrame {
                         .addComponent(jLabel7))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(insert)
-                    .addComponent(Update)
-                    .addComponent(delete)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(caristatus)
-                        .addComponent(search)))
+                        .addComponent(search)
+                        .addComponent(stats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(insert)
+                        .addComponent(Update)
+                        .addComponent(delete)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -727,18 +729,42 @@ public class Transaksi extends javax.swing.JFrame {
         DefaultTableModel tabmode = new DefaultTableModel(null, Baris);
         tableTRANSAKSI.setModel(tabmode);
         try {
-            String sql = "SELECT * FROM detail_bon WHERE STATUS LIKE '%" + txtCari.getText() + "%'order by Id_Transaksi";
+            Hashtable<Integer, String> cari1 = new Hashtable<Integer, String>();
+            cari1.put(1, "Lunas");
+            cari1.put(2, "Hutang");
+            String sql;
             java.sql.Statement stat = conn.createStatement();
-            ResultSet hasil = stat.executeQuery(sql);
-            while (hasil.next()) {
-                String Id_Transaksi = hasil.getString("Id_Transaksi");
-                String Nama = hasil.getString("Nama");
-                String Nomor = hasil.getString("Nomor");
-                String Nominal = hasil.getString("Nominal");
-                String Status = hasil.getString("Status");
+            ResultSet hasil = null;
 
-                String[] data = {Id_Transaksi, Nama, Nomor, Nominal, Status};
-                tabmode.addRow(data);
+            switch (stats.getSelectedIndex()) {
+                case 0:
+                    sql = "SELECT * FROM detail_bon WHERE STATUS LIKE '%" + cari1.get(1) + "%'order by Id_Transaksi";
+                    hasil = stat.executeQuery(sql);
+                    while (hasil.next()) {
+                        String Id_Transaksi = hasil.getString("Id_Transaksi");
+                        String Nama = hasil.getString("Nama");
+                        String Nomor = hasil.getString("Nomor");
+                        String Nominal = hasil.getString("Nominal");
+                        String Status = hasil.getString("Status");
+
+                        String[] data = {Id_Transaksi, Nama, Nomor, Nominal, Status};
+                        tabmode.addRow(data);
+                    }
+                    break;
+                case 1:
+                    sql = "SELECT * FROM detail_bon WHERE STATUS LIKE '%" + cari1.get(2) + "%'order by Id_Transaksi";
+                    hasil = stat.executeQuery(sql);
+                    while (hasil.next()) {
+                        String Id_Transaksi = hasil.getString("Id_Transaksi");
+                        String Nama = hasil.getString("Nama");
+                        String Nomor = hasil.getString("Nomor");
+                        String Nominal = hasil.getString("Nominal");
+                        String Status = hasil.getString("Status");
+
+                        String[] data = {Id_Transaksi, Nama, Nomor, Nominal, Status};
+                        tabmode.addRow(data);
+                    }
+                    break;
             }
             tableTRANSAKSI.setModel(tabmode);
         } catch (Exception e) {
@@ -816,6 +842,7 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JLabel no;
     private javax.swing.JLabel nominal;
     private javax.swing.JButton search;
+    private javax.swing.JComboBox<String> stats;
     private javax.swing.JLabel status;
     private javax.swing.JTable tableMenu;
     private javax.swing.JTable tablePelanggan;
@@ -824,7 +851,6 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JLabel totalharga;
     private javax.swing.JLabel transaksi;
     private javax.swing.JTextField txtBayar;
-    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtKembalian;
     private javax.swing.JTextField txtNama;
