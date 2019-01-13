@@ -38,7 +38,7 @@ public class Sistem_Penjualan_Pulsa extends javax.swing.JFrame {
         Object[] Baris = {"Id Menu", "Nominal", "Harga Pulsa"};
         tabmode = new DefaultTableModel(null, Baris);
         tablemenu.setModel(tabmode);
-        String sql = "select * from Pulsa order by harga desc";
+        String sql = "select * from Pulsa order by Id_Menu asc";
         try {
             java.sql.Statement stat = conn.createStatement();
             ResultSet hasil = stat.executeQuery(sql);
